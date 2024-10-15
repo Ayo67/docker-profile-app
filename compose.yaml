@@ -27,7 +27,7 @@ services:
     networks:
          - profile-network
     volumes:
-          - mongo-data:/data/db
+          - profiledata:/data/db
 
   mongo-express:
     container_name: express
@@ -45,6 +45,6 @@ services:
       - database  
 
 volumes:
-  mongo-data:
-    name: 'my-data-vol'
+  profiledata:
     driver: local
+
